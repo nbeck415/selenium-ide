@@ -8,6 +8,8 @@ services:
       - "./tests/static:/usr/share/nginx/html:ro"
   selenium:
     image: "selenium/standalone-chrome-debug:3.11.0-antimony"
+    labels:
+      shipyard.route: '/'
     ports:
       - "4444:4444"
       - "5900:5900"
